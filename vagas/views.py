@@ -63,7 +63,7 @@ class CandidaturaCreateView(LoginRequiredMixin, View):
             )
 
             date_prefix = datetime.now().strftime('%Y_%m_%d')
-            filename = f'{date_prefix}_curriculo_{form.cleaned_data.get('nome')}'
+            filename = f"{date_prefix}_curriculo_{form.cleaned_data.get('nome')}"
 
             cloudinary.uploader.upload(
                 file=form.cleaned_data.get('curriculo'),
